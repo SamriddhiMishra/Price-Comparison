@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+	<title>Event</title>
+</head>
+<body style="text-align:center;background-image:url({% static 'images/pic4.jpg' %});">
+<div id="outer" style="min-height:750px;padding:10px;">
+<table style="width:90%;margin:0 auto;background-color:rgba(0,0,0,0.5);padding:2px;color:white;">
+	<tr style="font-family:Forte;color:white;text-shadow:1px 1px rgba(0,0,0,0.3);font-size:30px;height:30px;">
+		<th style="border-right:1px solid white;border-bottom:1px solid white;">Flipkart_Prod</th>
+		<th style="border-right:1px solid white;border-bottom:1px solid white;">Flipkart_Price</th>
+		<th style="border-right:1px solid white;border-bottom:1px solid white;">PayTm_Prod</th>
+		<th style="border-bottom:1px solid white;">PayTm_Price</th>
+	</tr>
+	{% for ff in f %}
+	<tr style="height:50px;padding:2px;">
+		<td style="border-right:1px solid white;width:50%;">{{ff.fprod}}</td>
+		<td style="border-right:1px solid white;">{{ff.fprice}}</td>
+		<td style="border-right:1px solid white;width:40%;">{{ff.aprod}}</td>
+		<td>{{ff.aprice}}</td>
+	</tr>
+
+	{% endfor %}
+
+</table>
+</div>
+
+</body>
+</html>
